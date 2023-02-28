@@ -16,9 +16,9 @@ public class CourseController {
 		this.courseService = courseService;
 	}
 	
-	@GetMapping()
-	public List<Course> getAllCourses() {
-		return courseService.getAllCourses();
+	@GetMapping("/{id}/courses")
+	public List<Course> getAllCourses(@PathVariable String id) {
+		return courseService.getAllCourses(id);
 	}
 	
 	@GetMapping("/{topicId}/courses/{id}")
@@ -38,7 +38,7 @@ public class CourseController {
 		courseService.updateCourse(course);
 	}
 	
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/{topicId}/courses/{id}")
 	public void deleteCourse(@PathVariable String id) {
 		courseService.deleteCourse(id);
 	}
