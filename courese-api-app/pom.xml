@@ -20,8 +20,8 @@
 		<maven.test.skip>true</maven.test.skip>
 		<deploy.wildfly.host>127.0.0.1</deploy.wildfly.host>
 		<deploy.wildfly.port>9990</deploy.wildfly.port>
-		<deploy.wildfly.username>thami</deploy.wildfly.username>
-		<deploy.wildfly.password>thami!</deploy.wildfly.password>
+		<deploy.wildfly.username>*****</deploy.wildfly.username>
+		<deploy.wildfly.password>*****</deploy.wildfly.password>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -81,6 +81,11 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>4.0.1</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>2.0.6</version>
 		</dependency>
 	</dependencies>
 
