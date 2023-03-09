@@ -1,6 +1,8 @@
 package com.thami.course.course;
 
 import com.thami.course.topic.Topic;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,7 +34,7 @@ public class CourseController {
 		courseService.addCourse(course);
 	}
 	
-	@PutMapping("/{id}/{topicId}/courses/")
+	@PutMapping("/{topicId}/courses/{id}")
 	public void updateCourse(@RequestBody Course course, @PathVariable String topicId) {
 		course.setTopic(new Topic(topicId, "", ""));
 		courseService.updateCourse(course);
